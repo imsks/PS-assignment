@@ -1,0 +1,431 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    font-size: 14px;
+    color: #e6e6e6;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff;
+    color: #3a3a3a;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+    width: 10%;
+  }
+
+  .toolbar--links {
+    margin: 0 16px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    width: 60%;
+    color: #b9b9b9;
+  }
+
+  .toolbar--links--items {
+    color: #8a8a8a;
+  }
+
+  .toolbar--links--profile {
+    background-color: #fafafa;
+    box-shadow: 2px 2px 5px #afafaf;
+    padding: 5px 35px;
+    border-radius: 10px;
+    color: #447fec;
+  }
+
+  .toolbar #twitter-logo:hover {
+    opacity: 0.8;
+  }
+
+  .content {
+    display: flex;
+    margin: 60px 0;
+    /* padding: 0 16px; */
+    /* max-width: 960px; */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    width: 83%;
+    display: flex;
+    justify-content: start;
+    margin: 20px 0;
+  }
+
+  .header--heading {
+    color: #447fec;
+    font-size: 48px;
+  }
+
+  .header--divider {
+    background-color: #e9e9e9;
+    width: 100%;
+    height: 10px;
+  }
+
+  .main--content {
+    width: 100%;
+    margin: 30px 0;
+    display: grid;
+    gap: 0.5rem;
+    justify-items: baseline;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .main--content--left {
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    max-height: 270px;
+    width: 50%;
+    align-self: baseline;
+    justify-self: center;
+
+  }
+
+  .main--content--left--list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .main--content--left--list--item {
+    color: #2c2c2c;
+  }
+
+  .main--content--left--list--item--container {
+    padding: 10px 60px;
+  }
+
+  .main--content--left--list--item--container--active {
+    padding: 10px 60px;
+    background-color: #1976d2;
+    color: white;
+  }
+
+  .main--content--left--list--item--container--heading {
+  }
+
+  .main--content--right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+  .main--content--right--heading {
+    color: #1976d2;
+  }
+
+  .main--content--right--cards {
+    margin: 10px 0;
+  }
+
+  .main--content--right--cards--item {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+  }
+
+  .main--content--right--cards--item--image {
+  }
+
+  .main--content--right--cards--item--image--container {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+  }
+
+  .main--content--right--cards--item--content {
+    margin: 0 10px;
+    font-size: 8px;
+  }
+
+  .main--content--right--cards--item--content--name {
+    color: black;
+  }
+
+  .main--content--right--cards--item--content--camera {
+    color: black;
+  }
+
+  .main--content--right--cards--item--content--paid {
+    color: #1976d2;
+  }
+
+  .main--content--right--cards--item--content--message {
+    color: #d24d19;
+    font-weight: 400;
+  }
+
+  .main--content--right--cards--item--action {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .main--content--right--cards--item--action--button {
+    padding: 10px 25px;
+    margin: 0 10px;
+    background-color: #1976d2;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .main--content--right--divider {
+    width: 59%;
+    height: 1px;
+    background-color: #9b9b9b;
+    margin: 10px 0;
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img width="100" alt="Angular Logo" src="../assets/images/logo.png" />
+  <!-- <div cla2s="spacer"></div> -->
+  <div class="toolbar--links">
+    <a
+      class="toolbar--links--items"
+      target="_blank"
+      rel="noopener"
+      href="https://example.com/"
+    >
+      HOME
+    </a>
+    <a
+      class="toolbar--links--items"
+      target="_blank"
+      rel="noopener"
+      href="https://example.com/"
+    >
+      SERVICES
+    </a>
+    <a
+      class="toolbar--links--items"
+      target="_blank"
+      rel="noopener"
+      href="https://example.com/"
+    >
+      WINNERS
+    </a>
+    <a
+      class="toolbar--links--items"
+      target="_blank"
+      rel="noopener"
+      href="https://example.com/"
+    >
+      ABOUT US
+    </a>
+    <div class="toolbar--links--profile">
+      <h3>Hi Siddaya</h3>
+    </div>
+  </div>
+</div>
+
+<div class="content" role="main">
+  <!-- Header -->
+  <div class="header">
+    <h1 class="header--heading">My Account</h1>
+  </div>
+
+  <!-- Divider -->
+  <div class="header--divider"></div>
+
+  <!-- Main Content -->
+  <div class="main--content">
+    <div class="main--content--left">
+      <ul class="main--content--left--list">
+        <li class="main--content--left--list--item">
+          <div class="main--content--left--list--item--container">
+            <h3 class="main--content--left--list--item--container--heading">
+              Account Details
+            </h3>
+          </div>
+        </li>
+        <li class="main--content--left--list--item">
+          <div class="main--content--left--list--item--container--active">
+            <h3 class="main--content--left--list--item--container--heading">
+              Account Details
+            </h3>
+          </div>
+        </li>
+        <li class="main--content--left--list--item">
+          <div class="main--content--left--list--item--container">
+            <h3 class="main--content--left--list--item--container--heading">
+              Account Details
+            </h3>
+          </div>
+        </li>
+        <li class="main--content--left--list--item">
+          <div class="main--content--left--list--item--container">
+            <h3 class="main--content--left--list--item--container--heading">
+              Account Details
+            </h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="main--content--right">
+      <h1 class="main--content--right--heading">Verification Status</h1>
+      <div class="main--content--right--cards">
+        <div class="main--content--right--cards--item">
+          <div class="main--content--right--cards--item--image">
+            <img
+              src="https://p.imgci.com/db/PICTURES/CMS/128400/128483.1.jpg"
+              class="main--content--right--cards--item--image--container"
+            />
+          </div>
+          <div class="main--content--right--cards--item--content">
+            <h1 class="main--content--right--cards--item--content--name">
+              Siddaya Swami
+            </h1>
+            <h1 class="main--content--right--cards--item--content--camera">
+              Nikon D705
+            </h1>
+            <h1 class="main--content--right--cards--item--content--paid">
+              Paid 50 Rupees
+            </h1>
+            <h1 class="main--content--right--cards--item--content--message">
+              We are working on your post please wait till confirmation.
+            </h1>
+          </div>
+          <div class="main--content--right--cards--item--action">
+            <button class="main--content--right--cards--item--action--button">
+              View
+            </button>
+            <button class="main--content--right--cards--item--action--button">
+              Delete
+            </button>
+          </div>
+        </div>
+
+        <div class="main--content--right--divider"></div>
+
+        <div class="main--content--right--cards--item">
+          <div class="main--content--right--cards--item--image">
+            <img
+              src="https://p.imgci.com/db/PICTURES/CMS/128400/128483.1.jpg"
+              class="main--content--right--cards--item--image--container"
+            />
+          </div>
+          <div class="main--content--right--cards--item--content">
+            <h1 class="main--content--right--cards--item--content--name">
+              Siddaya Swami
+            </h1>
+            <h1 class="main--content--right--cards--item--content--camera">
+              Nikon D705
+            </h1>
+            <h1 class="main--content--right--cards--item--content--paid">
+              Paid 50 Rupees
+            </h1>
+            <h1 class="main--content--right--cards--item--content--message">
+              We are working on your post please wait till confirmation.
+            </h1>
+          </div>
+          <div class="main--content--right--cards--item--action">
+            <button class="main--content--right--cards--item--action--button">
+              View
+            </button>
+            <button class="main--content--right--cards--item--action--button">
+              Delete
+            </button>
+          </div>
+        </div>
+
+        <div class="main--content--right--divider"></div>
+
+        <div class="main--content--right--cards--item">
+          <div class="main--content--right--cards--item--image">
+            <img
+              src="https://p.imgci.com/db/PICTURES/CMS/128400/128483.1.jpg"
+              class="main--content--right--cards--item--image--container"
+            />
+          </div>
+          <div class="main--content--right--cards--item--content">
+            <h1 class="main--content--right--cards--item--content--name">
+              Siddaya Swami
+            </h1>
+            <h1 class="main--content--right--cards--item--content--camera">
+              Nikon D705
+            </h1>
+            <h1 class="main--content--right--cards--item--content--paid">
+              Paid 50 Rupees
+            </h1>
+            <h1 class="main--content--right--cards--item--content--message">
+              We are working on your post please wait till confirmation.
+            </h1>
+          </div>
+          <div class="main--content--right--cards--item--action">
+            <button class="main--content--right--cards--item--action--button">
+              View
+            </button>
+            <button class="main--content--right--cards--item--action--button">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
